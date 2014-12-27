@@ -88,8 +88,8 @@
     <File name="ds18b20.h" path="ds18b20.h" type="1"/>
     <File name="cmsis_boot/startup/startup_stm32f10x_md_vl.c" path="cmsis_boot/startup/startup_stm32f10x_md_vl.c" type="1"/>
     <File name="cmsis_boot/system_stm32f10x.c" path="cmsis_boot/system_stm32f10x.c" type="1"/>
-    <File name="stdio" path="" type="2"/>
     <File name="stm_lib/inc/misc.h" path="stm_lib/inc/misc.h" type="1"/>
+    <File name="stdio" path="" type="2"/>
     <File name="common_lib/utils.h" path="common_lib/utils.h" type="1"/>
     <File name="cmsis/core_cmInstr.h" path="cmsis/core_cmInstr.h" type="1"/>
     <File name="cmsis/core_cm3.h" path="cmsis/core_cm3.h" type="1"/>
@@ -114,14 +114,14 @@
     <File name="stm_lib/inc/stm32f10x_rcc.h" path="stm_lib/inc/stm32f10x_rcc.h" type="1"/>
     <File name="ds18b20.c" path="ds18b20.c" type="1"/>
     <File name="stm_lib/src/stm32f10x_usart.c" path="stm_lib/src/stm32f10x_usart.c" type="1"/>
-    <File name="common_lib/one_wire.c" path="common_lib/one_wire.c" type="1"/>
     <File name="stdio/printf.c" path="stdio/printf.c" type="1"/>
+    <File name="common_lib/one_wire.c" path="common_lib/one_wire.c" type="1"/>
     <File name="stm_lib/src/stm32f10x_gpio.c" path="stm_lib/src/stm32f10x_gpio.c" type="1"/>
     <File name="stm_lib/inc" path="" type="2"/>
-    <File name="common_lib" path="" type="2"/>
     <File name="stm_lib/inc/stm32f10x_gpio.h" path="stm_lib/inc/stm32f10x_gpio.h" type="1"/>
-    <File name="stm_lib/inc/stm32f10x_usart.h" path="stm_lib/inc/stm32f10x_usart.h" type="1"/>
+    <File name="common_lib" path="" type="2"/>
     <File name="main.c" path="main.c" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_usart.h" path="stm_lib/inc/stm32f10x_usart.h" type="1"/>
     <File name="common_lib/usart.h" path="common_lib/usart.h" type="1"/>
   </Files>
 </Project>

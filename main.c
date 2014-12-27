@@ -36,13 +36,14 @@ int main(void)
 	// Tick every 1 ms
 	if (SysTick_Config(SystemCoreClock / 1000))  while (1);
 
-	printf("Hello, World!\r\n\0");
+	printf("Hello, World!\r\n");
 	ds18b20_init(GPIOC, GPIO_Pin_6, TIM2);
     while(1)
     {
-    	ds18b20_convert_temperature();
+    	ds18b20_read_temperature_all();
     	ds18b20_wait_for_conversion();
-    	ds18b20_read_scratchpad();
+    	printf("%d---\r\n", ds18b20_get_precission());
+    	ds18b20_convert_temperature_all();
     }
 }
 
@@ -57,13 +58,14 @@ void EXTI0_IRQHandler(void)
 
     if (EXTI_GetITStatus(EXTI_Line0) != RESET)
     {
-//		GPIO_SetBits(GPIOC, GPIO_Pin_8);
-//		delay(200);
-//		GPIO_ResetBits(GPIOC, GPIO_Pin_8);
+        unsigned int j = 0;
+        while (j != 200000) ++j;
+		if (GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0) != Bit_RESET) {
+			return;
+		}
 
     	i = (i + 1) % 4;
 		ds18b20_set_precission(i);
-
         EXTI_ClearITPendingBit(EXTI_Line0);
     }
 }
