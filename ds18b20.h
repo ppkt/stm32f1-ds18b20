@@ -20,7 +20,7 @@ typedef struct {
 
 void ds18b20_init(GPIO_TypeDef *gpio, u16 port, TIM_TypeDef *timer);
 void ds18b20_set_precission(u8 precission);
-ds18b20_devices ds18b20_get_devices();
+ds18b20_devices ds18b20_get_devices(bool scan);
 
 void ds18b20_convert_temperature_simple(void);
 simple_float ds18b20_read_temperature_simple(void);

@@ -13,7 +13,11 @@ u8 ds18b20_get_precission(void) {
 	return precission;
 }
 
-ds18b20_devices ds18b20_get_devices() {
+ds18b20_devices ds18b20_get_devices(bool scan) {
+    if (scan) {
+        one_wire_devices_list_size = 0;
+        one_wire_list_of_devices = one_wire_search_rom(&one_wire_devices_list_size);
+    }
     ds18b20_devices ret;
     ret.size = one_wire_devices_list_size;
     ret.devices = one_wire_list_of_devices;
