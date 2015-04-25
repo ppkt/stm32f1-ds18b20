@@ -5,11 +5,13 @@
 #include "utils.h"
 #include "usart.h"
 #include <stdlib.h>
+#include <stdbool.h>
 
 // Structure in which temperature is stored
 typedef struct {
     s8 integer;
     u16 fractional;
+    bool is_valid;
 } simple_float;
 
 // Structure for returning list of devices on one wire

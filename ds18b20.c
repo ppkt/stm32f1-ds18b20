@@ -88,6 +88,7 @@ simple_float ds18b20_decode_temperature(void) {
 	u8 crc;
 	u8 data[9];
     simple_float f;
+    f.is_valid = false;
 	one_wire_reset_crc();
 
 	for (i = 0; i < 9; ++i) {
@@ -105,6 +106,7 @@ simple_float ds18b20_decode_temperature(void) {
 
     f.integer = (u8)temp;
     f.fractional = rest;
+    f.is_valid = true;
 
     char buffer[10];
     sprintf(buffer, "%d.%d\r", (int)temp, rest);
